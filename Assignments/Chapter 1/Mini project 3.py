@@ -1,0 +1,15 @@
+#Students management system
+ID=input("Enter Student ID: ")
+Name=(input("Enter Name: "))
+Sex=input("Enter (M/F): ").upper()
+Year=int(input("Enter Year of Study: "))
+Semester=int(input("Enter Semester: "))
+discount=float(input("Enter Discount Percentage: "))
+Pay=float(input("Enter Payment : "))
+Netpay=Pay-(Pay*discount/100)
+#Display student information
+print("\n===== Student Information =====")
+print("-"*90)
+print(f'{"ID":<10} {"Name":<15} {"Sex":<5} {"Year":<10} {"Semester":<10} {"Discount %":<15} {"Payment":<10} {"Net Pay":<10}')
+print(f'{ID:<10} {Name:<15} {Sex:<5} {Year:<10} {Semester:<10} {discount:<15} {Pay:<10.2f} {Netpay:<10.2f}')
+print("-"*90)
