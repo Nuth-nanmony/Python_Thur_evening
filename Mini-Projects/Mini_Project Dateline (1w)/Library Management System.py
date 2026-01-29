@@ -1,13 +1,17 @@
 #miniporject, Library management system
 
+from dotenv import load_dotenv
+import os
 import mysql.connector
 import csv
 
+load_dotenv()
+
 db = mysql.connector.connect(
-    host="127.0.0.1",
-    user="root",
-    password="Nimoinmysql123@",
-    database="library_db"
+    host=os.getenv("DB_HOST"),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),
+    database=os.getenv("DB_NAME")
 )
 cursor = db.cursor()
 #1. Add new books

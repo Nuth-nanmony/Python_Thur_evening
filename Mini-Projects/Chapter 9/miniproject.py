@@ -4,8 +4,8 @@ import mysql.connector
 import csv
 
 db = mysql.connector.connect(
-    host="127.0.0.1",
-    user="root",
+    host="",
+    user="",
     password="",
     database="student_db"
 )
