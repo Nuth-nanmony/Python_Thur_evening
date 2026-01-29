@@ -1,26 +1,26 @@
 #miniporject, Library management system
 
-from dotenv import load_dotenv
-import os
 import mysql.connector
 import csv
-
+from dotenv import load_dotenv
+import os
 load_dotenv()
 
 db = mysql.connector.connect(
     host=os.getenv("DB_HOST"),
     user=os.getenv("DB_USER"),
     password=os.getenv("DB_PASSWORD"),
-    database=os.getenv("DB_NAME")
+    database=os.getenv("DB_NAME"),
 )
 cursor = db.cursor()
+
 #1. Add new books
 def add():
     print("\n==Please fill the the Title==")
     title=input("Title of the book: ")
     author=input("Author of the book: ")
     category=input("Category of the book: ")
-    status=input("Status (Issued/Available): ")
+    status=input("Status (Available): ")
     cursor.execute(
         "INSERT INTO books (title,author,category,status) VALUES (%s,%s,%s,%s)",(title,author,category,status)
     )
