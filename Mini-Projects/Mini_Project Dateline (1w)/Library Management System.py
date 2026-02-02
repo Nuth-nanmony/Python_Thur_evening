@@ -7,10 +7,10 @@ import os
 load_dotenv()
 
 db = mysql.connector.connect(
-    host=os.getenv("DB_HOST"),
-    user=os.getenv("DB_USER"),
-    password=os.getenv("DB_PASSWORD"),
-    database=os.getenv("DB_NAME"),
+    host=os.getenv("DB1_HOST"),
+    user=os.getenv("DB1_USER"),
+    password=os.getenv("DB1_PASSWORD"),
+    database=os.getenv("DB1_NAME"),
 )
 cursor = db.cursor()
 
