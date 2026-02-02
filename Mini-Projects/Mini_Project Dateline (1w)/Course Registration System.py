@@ -13,3 +13,18 @@ db = mysql.connector.connect(
     database=os.getenv("DB3_NAME"),
 )
 cursor = db.cursor()
+
+def add_course():
+    pass
+
+def register():
+    pass
+
+def view_registrations():
+    pass
+
+def search_name():
+    pass
+
+def csv():
+    pass
